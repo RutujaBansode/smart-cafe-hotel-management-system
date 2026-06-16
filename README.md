@@ -45,3 +45,19 @@ src/
 - Sales Analytics Dashboard
 - Inventory Forecasting
 - UPI Payment Integration
+
+  ## 📸 Screenshots
+
+### Login Page
+![Login](screenshots/login.png)
+
+### Dashboard
+![Dashboard Top](screenshots/dashboardtop.png)
+![Dashboard 2](screenshots/dashboard2.png)
+![Dashboard 3](screenshots/dashboard3.png)
+
+### Order Page
+![Order](screenshots/order.png)
+
+### Confirmation Page
+![Confirmation](screenshots/confirm.png)
