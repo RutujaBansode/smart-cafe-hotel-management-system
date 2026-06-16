@@ -1,0 +1,183 @@
+/* ================= SMART CAFE - COFFEE THEME ================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --bg:#f5efe7;
+    --card:#fffaf3;
+    --text:#3b2f2f;
+    --muted:#7a6a5a;
+
+    --primary:#8b5e3c;     /* coffee brown */
+    --secondary:#d2a679;   /* caramel */
+    --accent:#c97b63;      /* warm highlight */
+
+    --success:#4caf50;
+    --danger:#e53935;
+    --warning:#f9a825;
+
+    --border:rgba(0,0,0,0.08);
+    --shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Outfit',sans-serif;
+}
+
+/* BODY */
+body{
+    background: linear-gradient(135deg, #f5efe7, #efe2d1);
+    color:var(--text);
+    min-height:100vh;
+}
+
+/* soft coffee glow */
+body::before{
+    content:"";
+    position:fixed;
+    top:-50%;
+    left:-50%;
+    width:200%;
+    height:200%;
+    background: radial-gradient(circle, rgba(139,94,60,0.12), transparent 45%);
+    z-index:-1;
+}
+
+/* CONTAINER */
+.container{
+    width:90%;
+    margin:30px auto;
+}
+
+/* CARDS */
+.content-block,
+.auth-container,
+.metric-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:22px;
+    box-shadow:var(--shadow);
+    margin-bottom:20px;
+}
+
+/* TABLE */
+.table-container{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+th{
+    background:var(--primary);
+    color:white;
+    padding:12px;
+    font-size:12px;
+    text-align:left;
+}
+
+td{
+    padding:14px;
+    border-bottom:1px solid #eee;
+}
+
+tr:hover{
+    background:#f8f1ea;
+}
+
+/* BADGES */
+.badge{
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:600;
+}
+
+.badge-success{background:#e8f5e9;color:var(--success);}
+.badge-danger{background:#ffebee;color:var(--danger);}
+.badge-warning{background:#fff8e1;color:var(--warning);}
+
+/* BUTTONS */
+.btn-primary{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:white;
+    padding:10px 16px;
+    border:none;
+    border-radius:10px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.btn-primary:hover{
+    opacity:0.9;
+}
+
+/* INPUTS */
+input,select{
+    width:100%;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid var(--border);
+    background:#fff;
+}
+
+/* HEADER */
+.block-header h2{
+    font-size:20px;
+    color:var(--primary);
+}
+
+/* LOGIN CENTER */
+.auth-wrapper{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+/* NAVBAR (COFFEE STYLE) */
+.navbar{
+    background:var(--primary);
+    color:white;
+    padding:18px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:var(--shadow);
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+.nav-links a:hover{
+    color:var(--secondary);
+}
+
+.user-badge{
+    background:rgba(255,255,255,0.2);
+    padding:6px 12px;
+    border-radius:20px;
+    color:white;
+}
+
+.logout-btn{
+    background:var(--danger);
+    color:white;
+    padding:8px 12px;
+    border-radius:8px;
+    text-decoration:none;
+}
+
