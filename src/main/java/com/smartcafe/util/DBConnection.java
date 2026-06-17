@@ -1,28 +1,29 @@
 package com.smartcafe.util;
 
+import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.util.Properties;
 
 public class DBConnection {
-
-    private static final String URL =
-            "jdbc:mysql://localhost:3306/smart_cafe";
-
-    private static final String USER = "root";
-
-    private static final String PASSWORD = "manas080224";
 
     public static Connection getConnection() {
 
         Connection con = null;
 
         try {
+            Properties props = new Properties();
+            props.load(new FileInputStream("db.properties"));
+
+            String url = props.getProperty("db.url");
+            String user = props.getProperty("db.user");
+            String password = props.getProperty("db.password");
+
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            con = DriverManager.getConnection(URL, USER, PASSWORD);
+            con = DriverManager.getConnection(url, user, password);
 
         } catch (Exception e) {
-            System.out.println("❌ Database connection failed!");
             e.printStackTrace();
         }
 
